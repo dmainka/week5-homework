@@ -8,7 +8,7 @@ Comic.destroy_all
 comics.each do |comic_info|
   c = Comic.new
   c.title = (comic_info["title"] || '')
-  c.description = (comic_info["description"] || '')
+  c.description = (comic_info["description"] || 'No description available.')
   if (comic_info["images"].empty?)
     c.image_url = "http://x.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/portrait_incredible.jpg"
   else

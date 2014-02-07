@@ -2,10 +2,10 @@ Comicbin::Application.routes.draw do
 
   root "comics#index"
 
-  get "/comics" => 'comics#index'
-  get "/new_comic" => 'comics#new'
+  get "/comics" => 'comics#index', as: "comics"
+  get "/comics/new" => 'comics#new', as: "new_comic"
   get "/comics/create" => 'comics#create'
-  get "/comics/delete/:comic_id" => 'comics#toast'
-  get "/comics/:movie_id" => 'movies#show'
+  get "/comics/delete/:comic_id" => 'comics#delete'
+  get "/comics/:comic_id" => 'comics#show'
 
 end
