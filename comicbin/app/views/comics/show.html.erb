@@ -10,9 +10,7 @@
     <!-- INSERT LINK TO DELETE A COMIC BOOK HERE.
          ATTACH A CLASS of 'btn btn-warning' TO THIS LINK.
          ALSO INCLUDE A CONFIRMATION MESSAGE 'Are you sure?' -->
- <!-- <%= link_to "Delete Comic", "/comics/delete/#{@comic.id}", class: 'btn btn-warning' %> -->
-    <%= link_to "Delete Comic", {action: "delete", id: @comic.id},
-                                 data: { confirm: "Are you sure?" },
-         class: 'btn btn-warning' %>
+    <%= link_to "Delete Comic", {action: "delete"}, data: { confirm: "Are you sure?" },
+        class: 'btn btn-warning' %>
   </div>
 </div>

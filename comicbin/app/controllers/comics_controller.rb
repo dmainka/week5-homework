@@ -19,7 +19,16 @@ class ComicsController < ApplicationController
   end
 
   def new
+    render 'new'
+  end
 
+  def create
+    c = Comic.new
+    c.title = params["title"]
+    c.description = params["description"]
+    c.image_url = params["image_url"]
+    c.save
+    redirect_to comics_path
   end
 
   def edit
